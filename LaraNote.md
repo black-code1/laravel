@@ -30,3 +30,19 @@ abort(404, 'Sorry, that post was not found.');
 Query Builder approache `$post = .\DB::table('posts')->where('slug',, $slug)->first();`
 
 Eloquent Model `$post = Post::where('slug','$slug')->first();`
+
+To create a table, use migration `php artisan make:migration create_posts_table`
+
+`$table->timestamp('published_at')->nullable();` means that the _published_at_ is optional
+
+To run migration `php artisan migrate`
+
+In _Production_ to add an additional column to your table run `php artisan make:migration add_title_to_posts_table`
+
+then add the column `$table->string('title');`
+
+and drop it `$table->dropColumn('title');`
+
+finally run `php artisan migrate`
+
+In _Development Mode_ you need just to add the column and run `php artisan migrate:fresh` which drop all the table and re-run everything from scratch
