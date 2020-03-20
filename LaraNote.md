@@ -23,6 +23,8 @@ abort(404, 'Sorry, that post was not found.');
 
 ---
 
+# SECTION 3 Database Access
+
 `mysql -u root` to connect to mysql
 
 `create database database_name;` to create a database from terminal
@@ -57,3 +59,5 @@ Command we could run on _tinker_
 `App\Assignment::first();` Fetch the first record
 `App\Assignment::first();`
 `App\Assignment::where('completed',false)->get();`
+
+# SECTION 4 Layout Pages
