@@ -61,3 +61,5 @@ Command we could run on _tinker_
 `App\Assignment::where('completed',false)->get();`
 
 # SECTION 4 Layout Pages
+
+Set an active link s follow `class="{{Request::path() === 'about' ? 'current_page_item' : ''}}"` or `class="{{Request::is('about')? 'current_page_item' : ''}}"`
