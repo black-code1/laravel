@@ -46,3 +46,5 @@ and drop it `$table->dropColumn('title');`
 finally run `php artisan migrate`
 
 In _Development Mode_ you need just to add the column and run `php artisan migrate:fresh` which drop all the table and re-run everything from scratch
+
+To Generates a migration and controller in a single command run `php artisan make:model Project -mc`
