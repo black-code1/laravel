@@ -48,3 +48,12 @@ finally run `php artisan migrate`
 In _Development Mode_ you need just to add the column and run `php artisan migrate:fresh` which drop all the table and re-run everything from scratch
 
 To Generates a migration and controller in a single command run `php artisan make:model Project -mc`
+
+Command we could run on _tinker_
+`$assignment = new App\Assignment;`
+`$assignment->body = 'Finish school work';`
+`$assignment->save();` Persist to the database
+`App\Assignment::all();` Fetch everything from the assignments table
+`App\Assignment::first();` Fetch the first record
+`App\Assignment::first();`
+`App\Assignment::where('completed',false)->get();`
