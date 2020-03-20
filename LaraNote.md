@@ -22,3 +22,11 @@ abort(404, 'Sorry, that post was not found.');
 }
 
 ---
+
+`mysql -u root` to connect to mysql
+
+`create database database_name;` to create a database from terminal
+
+Query Builder approache `$post = .\DB::table('posts')->where('slug',, $slug)->first();`
+
+Eloquent Model `$post = Post::where('slug','$slug')->first();`
