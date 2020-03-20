@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('test', function () {
-    return view('test');
+Route::get('/test', function () {
+    $name = request('name');
+    return view('test',[
+        'name' => $name
+    ]);
 });

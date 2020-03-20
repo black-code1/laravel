@@ -12,3 +12,5 @@ Substitute the result obtained from the previous last commande to the _paths_ as
 # SECTION 2 Routing
 
 `Route::get('test',function() {return view('test');});`
+
+`return view('test',['name' => $name])` pass request data to a view
