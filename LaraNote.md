@@ -121,3 +121,8 @@ request()->validate([
 ]);
 
 ---
+
+# SECTION 6 Controller Techniques
+
+Use something else other than id as a wildcard
+_public function getRouteKeyName(){ return 'slug' }_ meaning `Article::where('slug', $article)->first()`
