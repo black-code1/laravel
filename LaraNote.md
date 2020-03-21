@@ -158,3 +158,33 @@ If Validation is identical then:
 `` public function validateArticle() { request()->validate([ 'title' => 'required', 'excerpt' => 'required', 'body' => 'required' ]);` ``
 `
 _$article->update($this->validateArticle());_
+
+### Named Route
+
+`Route::get('/articles/{article}','ArticlesController@show')->name('articles.show');`
+
+`Route::get('/articles','ArticlesController@index')->name('articles.index');`
+
+Reference as follow: `<a href="{{ route('articles.show', $article) }}">`
+
+Then on the controller `return redirect( route('articles.show', $article));`
+
+`return redirect(route('articles.index'))`
+
+Or
+
+Add this
+
+---
+
+public function path()
+{
+return route('articles.show', \$this);
+}
+
+---
+
+To the model
+
+Then in the controller reference as follow:
+`return redirect($article->path());`
