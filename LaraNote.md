@@ -209,3 +209,17 @@ return \$this->hasMany(Article::class);
 }
 
 ---
+
+`factory(App\User::class)->create();* To Scaffold a user`
+`factory(App\User::class,5)->create();* To Scaffold a user`
+
+To create a Factory _php artisan make:factory ArticleFcatory -m "App\Article"_
+
+## Foreign Key
+
+\$table->foreign('user_id')
+->references('id')
+->on('users')
+->onDelete('cascade');
+
+            ***
