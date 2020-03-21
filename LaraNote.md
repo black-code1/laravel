@@ -188,3 +188,24 @@ To the model
 
 Then in the controller reference as follow:
 `return redirect($article->path());`
+
+# Eloquent
+
+## A Project belongs to a User
+
+public function user()
+{
+
+return \$this->belongsTo(User::class);
+}
+
+---
+
+## A User has many Articles
+
+public function articles()
+{
+return \$this->hasMany(Article::class);
+}
+
+---
