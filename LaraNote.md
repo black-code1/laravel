@@ -67,3 +67,9 @@ Set an active link s follow `class="{{Request::path() === 'about' ? 'current_pag
 Asset Compilation with Laravel Mix and Webpack `npm install` then compile by running `npm run dev` or `npm run watch`
 
 `<link rel="stylesheet" href="{{ mix('css/app.css') }}">` Laravel mix helper function
+
+# SECTION 5 Forms
+
+The Seven Restful Controller Actions `index (Render a list of a resource.), create (Shows a view to create a new resource.), store (Persist the new resource), show (Show a single resource.), edit (Show a view to edit an existing resource), update (Persist the edited resource), destroy (Delete the resource)`
+
+`php artisan make:controller ProjectsController -r -m Project` Generates the Seven Restful Controller Actions with the associated model

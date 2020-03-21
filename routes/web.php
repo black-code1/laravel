@@ -27,4 +27,6 @@ Route::get('/about',function(){
 Route::get('/articles','ArticlesController@index');
 
 Route::get('/articles/{article}','ArticlesController@show');
+Route::get('/articles/edit','ArticlesController@edit');
+Route::get('/articles/{article}','ArticlesController@update');
 // Route::get('/posts/{post}','PostsController@show');
