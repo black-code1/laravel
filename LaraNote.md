@@ -93,3 +93,5 @@ _DELETE /videos/2_
 _GET /videos/subscribe_
 
 _POST /videos/subscriptions => VideoSubscriptionsController@store_
+
+`@csrf` _Cross Site Request Forgery_
