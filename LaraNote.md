@@ -97,3 +97,27 @@ _POST /videos/subscriptions => VideoSubscriptionsController@store_
 `@csrf` _Cross Site Request Forgery_
 
 `return redirect('/articles/' .$article->id);` Redirect back to to the edited article
+
+## To output feedback for form validation
+
+---
+
+ <input type="text" class="input @error('title') is-danger @enderror" name="title" id="title">
+
+            @error('title')
+              <p class="help is-danger">{{ $errors->first('title') }}</p>
+            @enderror
+
+---
+
+### Validation
+
+---
+
+request()->validate([
+'title' => 'required',
+'excerpt' => 'required',
+'body' => 'required'
+]);
+
+---
