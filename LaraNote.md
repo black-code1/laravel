@@ -126,3 +126,35 @@ request()->validate([
 
 Use something else other than id as a wildcard
 _public function getRouteKeyName(){ return 'slug' }_ meaning `Article::where('slug', $article)->first()`
+
+To avoid _Mass Assignment Error_ `protected $fillable = ['title', 'excerpt', 'body'];` or `protected $guarded = [];`
+
+Validate and Create Data at the same time
+
+---
+
+      Article::create(request()->validate([
+        'title' => 'required',
+        'excerpt' => 'required',
+        'body' => 'required'
+    ]));
+
+---
+
+Update: Assign the attribute and persist it all in one go
+
+---
+
+\$article->update(request()->validate([
+'title' => 'required',
+'excerpt' => 'required',
+'body' => 'required'
+]));
+
+---
+
+If Validation is identical then:
+
+`` public function validateArticle() { request()->validate([ 'title' => 'required', 'excerpt' => 'required', 'body' => 'required' ]);` ``
+`
+_$article->update($this->validateArticle());_
