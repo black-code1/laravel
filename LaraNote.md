@@ -63,3 +63,7 @@ Command we could run on _tinker_
 # SECTION 4 Layout Pages
 
 Set an active link s follow `class="{{Request::path() === 'about' ? 'current_page_item' : ''}}"` or `class="{{Request::is('about')? 'current_page_item' : ''}}"`
+
+Asset Compilation with Laravel Mix and Webpack `npm install` then compile by running `npm run dev` or `npm run watch`
+
+`<link rel="stylesheet" href="{{ mix('css/app.css') }}">` Laravel mix helper function

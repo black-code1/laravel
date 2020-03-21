@@ -15,18 +15,14 @@
 		</div>
 		<div id="sidebar">
 			<ul class="style1">
-				<li class="first">
-					<h3>Amet sed volutpat mauris</h3>
-					<p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-				</li>
-				<li>
-					<h3>Sagittis diam dolor sit amet</h3>
-					<p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-				</li>
-				<li>
-					<h3>Maecenas ac quam risus</h3>
-					<p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-				</li>
+				@foreach ($articles as $article)
+					<li class="first">
+						<h3>
+							<a href="/articles/{{ $article->id }}"> {{ $article->title }}</a></h3>
+						<p><a href="#">{{ $article->excerpt }}</a></p>
+					</li>
+				@endforeach
+				
 			</ul>
 			<div id="stwo-col">
 				<div class="sbox1">
@@ -51,7 +47,5 @@
 		</div>
 	</div>
 </div>
-<div id="copyright" class="container">
-	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</div>
+
 @endsection
