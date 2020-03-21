@@ -95,3 +95,5 @@ _GET /videos/subscribe_
 _POST /videos/subscriptions => VideoSubscriptionsController@store_
 
 `@csrf` _Cross Site Request Forgery_
+
+`return redirect('/articles/' .$article->id);` Redirect back to to the edited article
