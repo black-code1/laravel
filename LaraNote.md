@@ -223,3 +223,6 @@ To create a Factory _php artisan make:factory ArticleFcatory -m "App\Article"_
 ->onDelete('cascade');
 
             ***
+
+_An Article has many tags_
+_tag belongs to an article_
