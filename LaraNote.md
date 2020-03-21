@@ -73,3 +73,23 @@ Asset Compilation with Laravel Mix and Webpack `npm install` then compile by run
 The Seven Restful Controller Actions `index (Render a list of a resource.), create (Shows a view to create a new resource.), store (Persist the new resource), show (Show a single resource.), edit (Show a view to edit an existing resource), update (Persist the edited resource), destroy (Delete the resource)`
 
 `php artisan make:controller ProjectsController -r -m Project` Generates the Seven Restful Controller Actions with the associated model
+
+## Restful Routing
+
+_GET /articles_
+_GET /articles/:id_
+_POST /articles_
+_PUT /articles/:id_
+_DELETE /articles/:id_
+
+_GET /videos_
+_GET /videos/create_
+_POST /videos_
+_GET /videos/2_
+_GET /videos/2/edit_
+_PUT /videos/2_
+_DELETE /videos/2_
+
+_GET /videos/subscribe_
+
+_POST /videos/subscriptions => VideoSubscriptionsController@store_
